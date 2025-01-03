@@ -19,7 +19,10 @@ const Header = () => {
         </Link>
         <div className="flex items-center space-x-4">
           <SignedIn>
-            <Link href={"/dashboard"} className="text-gray-600 hover:text-blue-600 flex items-center gap-2">
+          <Link
+              href="/dashboard"
+              className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
+            >
               <Button variant="outline">
                 <LayoutDashboard size={18} />
                 <span className="hidden md:inline">Dashboard</span>
@@ -28,7 +31,7 @@ const Header = () => {
             <Link href={"/transaction/create"}>
               <Button className="flex items-center gap-2">
                 <PenBox size={18} />
-                <span className="hidden md:inline">Dashboard</span>
+                <span className="hidden md:inline">Add Transaction</span>
               </Button>
             </Link>
           </SignedIn>
@@ -38,12 +41,12 @@ const Header = () => {
             </SignInButton>
           </SignedOut>
           <SignedIn>
-            <UserButton 
-            appearance={{
-              elements:{
-                avatarBox:"w-10 h-10"
-              }
-            }}
+          <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: "w-10 h-10",
+                },
+              }}
             />
           </SignedIn>
         </div>

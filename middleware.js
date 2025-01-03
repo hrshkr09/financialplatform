@@ -6,6 +6,7 @@ const isProtectedRoute = createRouteMatcher([
   "/transaction(.*)",
 ]);
 
+//this is to make sure that if user is not logged in then user will be redirected to login page
 export default clerkMiddleware(async (auth, req) => {
   const { userId } = await auth();
   if (!userId && isProtectedRoute(req)) {
